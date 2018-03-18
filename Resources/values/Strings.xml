@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Tap Me!</string>
+	<string name="app_name">HQI</string>
+<!--	<string name="app_title">HQI - the Health Quality Index (Hospitals and Patients Edition)</string>-->
+	<string name="app_title">HQI</string>
+	<string name="customer_support_email">support@aesculapiusvn.com</string>
+	<string name="company_website">http://www.aesculapiusvn.com</string>
+	<string name="alert_dismissal_phrase">Tap the Back button to dismiss this message</string>
+	<string name="registration_states_prompt">Choose a Contact Address State</string>
+	<string name="registration_title_prompt">Choose a Title</string>
+	<string name="hospital_prompt">Choose a Hospital</string>
+	<string-array name="registration_title_array">
+		<item>Chief</item>
+		<item>Dr.</item>
+		<item>Mr.</item>
+		<item>Mrs.</item>
+		<item>Miss</item>
+	</string-array>
+	<string-array name="registration_states_array">
+		<item>ABIA STATE</item>
+		<item>ABUJA (F.C.T.)</item>
+		<item>ADAMAWA STATE</item>
+		<item>AKWA IBOM STATE</item>
+		<item>ANAMBRA STATE</item>
+		<item>BAUCHI STATE</item>
+		<item>BAYELSA STATE</item>
+		<item>BENUE STATE</item>
+		<item>BORNO STATE</item>
+		<item>CROSS RIVER STATE</item>
+		<item>DELTA STATE</item>
+		<item>EBONYI STATE</item>
+		<item>EDO STATE</item>
+		<item>EKITI STATE</item>
+		<item>ENUGU STATE</item>
+		<item>GOMBE STATE</item>
+		<item>IMO STATE</item>
+		<item>JIGAWA STATE</item>
+		<item>KADUNA STATE</item>
+		<item>KANO STATE</item>
+		<item>KATSINA STATE</item>
+		<item>KEBBI STATE</item>
+		<item>KOGI STATE</item>
+		<item>KWARA STATE</item>
+		<item>LAGOS STATE</item>
+		<item>NASARAWA STATE</item>
+		<item>NIGER STATE</item>
+		<item>OGUN STATE</item>
+		<item>ONDO STATE</item>
+		<item>OSUN STATE</item>
+		<item>OYO STATE</item>
+		<item>PLATEAU STATE</item>
+		<item>RIVERS STATE</item>
+		<item>SOKOTO STATE</item>
+		<item>TARABA STATE</item>
+		<item>YOBE STATE</item>
+		<item>ZAMFARA STATE</item>
+	</string-array>
+</resources>

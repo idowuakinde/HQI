@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/CustomSelector">
+    <LinearLayout
+        android:id="@+id/Text_layout_base"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/Image"
+        android:layout_below="@+id/Text">
+        <LinearLayout
+            android:id="@+id/Text_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Image">
+            <TextView
+                android:id="@+id/txtSurveyNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF7F3300"
+                android:paddingLeft="10dip" />
+            <TextView
+                android:id="@+id/txtHospitalRef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF7F3300"
+                android:paddingLeft="10dip" />
+            <TextView
+                android:id="@+id/txtHospitalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF7F3300"
+                android:paddingLeft="10dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Text_layout2"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Image"
+            android:layout_below="@+id/Text">
+            <TextView
+                android:id="@+id/txtSurveyDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF7F3300"
+                android:paddingLeft="10dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

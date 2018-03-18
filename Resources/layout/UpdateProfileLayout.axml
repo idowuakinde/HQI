@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/official_orange">
+    <TextView
+        android:id="@+id/header_myaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit My Profile"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="3dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:id="@+id/account_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:orientation="horizontal"
+        android:layout_below="@+id/header_layout"
+        android:background="@color/official_orange"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account: "
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#ffffffff"
+        android:layout_weight="1"
+        android:layout_gravity="top">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/parentlayout">
+        <!--layout fof Plenty millions logo  -->
+        <!--layout fof Plenty millions logo  -->
+            <LinearLayout
+                android:id="@+id/imagelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_layout_profile"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dip">
+            <!-- Plenty millions logo -->
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_below="@+id/account_number"
+                    android:adjustViewBounds="true"
+                    android:layout_marginLeft="0dip"
+                    android:paddingLeft="3dip"
+                    android:src="@drawable/Icon" />
+            <!-- <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.64" >
+	        </RelativeLayout> -->
+            </LinearLayout>
+        <!-- line separator -->
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/separator"
+                android:layout_height="1dp"
+                android:layout_below="@+id/imagelayout"
+                android:background="@android:color/darker_gray" />
+            <TextView
+                android:id="@+id/profile_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please make your desired changes below:"
+                android:textColor="@color/official_orange"
+                android:layout_marginLeft="4dip"
+                android:layout_below="@+id/separator"
+                android:layout_marginRight="10dip"
+                android:paddingLeft="3dip"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        <!-- line separator -->
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/separator2"
+                android:layout_height="1dp"
+                android:layout_below="@+id/profile_intro"
+                android:background="@android:color/darker_gray" />
+            <LinearLayout
+                android:id="@+id/email_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/separator2">
+                <TextView
+                    android:id="@+id/emailaddress_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Email:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/upd_Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="#000000"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/email_layout">
+                <TextView
+                    android:id="@+id/title_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Title:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <Spinner
+                    android:id="@+id/r_spinnerTitle"
+                    android:background="@color/official_orange"
+                    android:textSize="15dip"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:textColor="@color/official_orange"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/registration_title_prompt"
+                    android:layout_marginRight="4dp"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/lastname_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/title_layout">
+                <TextView
+                    android:id="@+id/lastname_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Surname:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/upd_LastName"
+                    android:hint="Surname"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/firstname_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/lastname_layout">
+                <TextView
+                    android:id="@+id/firstname_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="First Name:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/upd_FirstName"
+                    android:hint="First Name"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/datebirth_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/firstname_layout">
+                <TextView
+                    android:id="@+id/Date_of_Birth_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date Of Birth:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/upd_DateOfBirth"
+                    android:hint="Date of Birth"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/homeaddress1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/datebirth_layout">
+                <LinearLayout
+                    android:id="@+id/homeaddress1_layout_hori_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/homeaddress_profile"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Address:"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginTop="10dip"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <EditText
+                        android:inputType="text"
+                        android:id="@+id/upd_AddressLine1"
+                        android:hint="Address Line 1"
+                        android:paddingTop="10px"
+                        android:paddingRight="10px"
+                        android:paddingBottom="10px"
+                        android:paddingLeft="10px"
+                        android:textColorHint="@color/official_orange"
+                        android:background="#ffffffe1"
+                        android:typeface="normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="150px"
+                        android:layout_gravity="bottom"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_marginRight="4dp"
+                        android:gravity="top" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/homeaddress1_layout">
+                <TextView
+                    android:id="@+id/state_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="State:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <Spinner
+                    android:id="@+id/r_spinnerState"
+                    android:background="@color/official_orange"
+                    android:textSize="15dip"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:textColor="@color/official_orange"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/registration_states_prompt"
+                    android:layout_marginRight="4dp"
+                    android:layout_gravity="bottom" />
+            </LinearLayout>
+        <!-- line separator -->
+            <LinearLayout
+                android:id="@+id/telephone1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/state_layout">
+                <TextView
+                    android:id="@+id/telephone1_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Telephone 1:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="phone"
+                    android:id="@+id/upd_Telephone1"
+                    android:hint="Telephone 1"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/telephone2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/telephone1_layout">
+                <TextView
+                    android:id="@+id/telephone2_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Telephone 2:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="phone"
+                    android:id="@+id/upd_Telephone2"
+                    android:hint="Telephone 2"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/telephone3_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/telephone2_layout">
+                <TextView
+                    android:id="@+id/telephone3_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Telephone 3:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="phone"
+                    android:id="@+id/upd_Telephone3"
+                    android:hint="Telephone 3"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/occupation_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/telephone3_layout">
+                <TextView
+                    android:id="@+id/occupation_profile"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:text="Occupation:"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="4dip"
+                    android:layout_marginTop="10dip"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/upd_Occupation"
+                    android:hint="Occupation"
+                    android:paddingTop="10px"
+                    android:paddingRight="10px"
+                    android:paddingBottom="10px"
+                    android:paddingLeft="10px"
+                    android:textColorHint="@color/official_orange"
+                    android:background="#ffffffe1"
+                    android:typeface="normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="4dp" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/separator3"
+                android:layout_height="1dp"
+                android:layout_below="@+id/occupation_layout"
+                android:background="@android:color/darker_gray" />
+            <LinearLayout
+                android:id="@+id/update_profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/separator3"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/upd_btnSaveProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Save Changes"
+                    android:textColor="#000000"
+                    android:paddingLeft="10dip"
+                    android:layout_marginLeft="2dip"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                <Button
+                    android:id="@+id/upd_btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="    Cancel    "
+                    android:textColor="#000000"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="2dip" />
+            </LinearLayout>
+        <!--Games, Account, result, and info buttons begins here -->
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/infocontactbtn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/go_to_web_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#ffffffff">
+        <Button
+            android:id="@+id/games_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_marginTop="5dp"
+            android:text="New Survey"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:layout_marginLeft="2dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="60dp"
+            android:height="40dp" />
+        <Button
+            android:id="@+id/result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/games_button"
+            android:layout_marginTop="5dp"
+            android:text="My Surveys"
+            android:layout_marginLeft="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="60dp"
+            android:height="40dp" />
+        <Button
+            android:id="@+id/account_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/result_button"
+            android:layout_marginTop="5dp"
+            android:text="My Profile"
+            android:layout_marginLeft="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="60dp"
+            android:height="40dp" />
+        <Button
+            android:id="@+id/info_button"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/account_button"
+            android:layout_marginTop="5dp"
+            android:text="Info"
+            android:layout_marginLeft="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="40dp"
+            android:height="40dp"
+            android:layout_width="wrap_content" />
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/info_button"
+            android:layout_marginTop="5dp"
+            android:text="Log Out"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="50dp"
+            android:height="40dp" />
+    </LinearLayout>
+</LinearLayout>

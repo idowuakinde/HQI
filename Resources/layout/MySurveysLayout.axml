@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/official_orange">
+    <TextView
+        android:id="@+id/header_myaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Previous Surveys"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="3dip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:id="@+id/account_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+        android:orientation="horizontal"
+        android:layout_below="@+id/header_layout"
+        android:background="@color/official_orange"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account: "
+            android:textColor="#FFFFFF"
+            android:layout_centerHorizontal="false"
+            android:layout_centerInParent="false"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="#ffffffff"
+        android:layout_weight="1"
+        android:layout_gravity="top">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/parentlayout">
+        <!--layout fof Plenty millions logo  -->
+        <!--layout fof Plenty millions logo  -->
+            <LinearLayout
+                android:id="@+id/imagelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/parentlayout"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="10dip">
+            <!-- Plenty millions logo -->
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="100dip"
+                    android:layout_height="100dip"
+                    android:layout_below="@+id/imagelayout"
+                    android:adjustViewBounds="true"
+                    android:layout_marginLeft="0dip"
+                    android:src="@drawable/Icon"
+                    android:paddingLeft="3dip" />
+            <!-- <RelativeLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="match_parent"
+	            android:layout_weight="0.64" >
+	        </RelativeLayout> -->
+            </LinearLayout>
+        <!-- line separator -->
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/separator"
+                android:layout_height="1dp"
+                android:layout_below="@+id/imagelayout"
+                android:background="@android:color/darker_gray" />
+        <!-- line separator -->
+        <!-- line separator -->
+            <LinearLayout
+                android:id="@+id/update_profile_layout"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_below="@+id/separator"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/List5"
+                    android:choiceMode="singleChoice" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:id="@+id/separator4"
+                android:layout_height="1dp"
+                android:layout_below="@+id/update_profile_layout"
+                android:background="@android:color/darker_gray" />
+        <!--Games, Account, result, and info buttons begins here -->
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/infocontactbtn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/go_to_web_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="#ffffffff">
+        <Button
+            android:id="@+id/games_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_marginTop="5dp"
+            android:text="New Survey"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:layout_marginLeft="2dip"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="60dp"
+            android:height="40dp" />
+        <Button
+            android:id="@+id/result_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/games_button"
+            android:layout_marginTop="5dp"
+            android:text="My Surveys"
+            android:layout_marginLeft="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="60dp"
+            android:height="40dp" />
+        <Button
+            android:id="@+id/account_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/result_button"
+            android:layout_marginTop="5dp"
+            android:text="My Profile"
+            android:layout_marginLeft="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="60dp"
+            android:height="40dp" />
+        <Button
+            android:id="@+id/info_button"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/result_button"
+            android:layout_marginTop="5dp"
+            android:text="Info"
+            android:layout_marginLeft="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="40dp"
+            android:height="40dp"
+            android:layout_width="wrap_content" />
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/go_to_web_layout"
+            android:layout_toRightOf="@+id/result_button"
+            android:layout_marginTop="5dp"
+            android:text="Logout"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:textColor="#FFFFFF"
+            android:background="@color/official_orange"
+            android:textSize="14dip"
+            android:textStyle="italic"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:width="50dp"
+            android:height="40dp" />
+    </LinearLayout>
+</LinearLayout>
